@@ -1,3 +1,21 @@
+.brandNameContainer{
+    z-index: 20;
+ }
+
+.navMenuMob {
+    transition: all .4s ease-in-out;
+    max-height: 0;
+}
+
+.navMenuMobOpen {
+    max-height: 220px;
+} 
+
+.navMenuMobClosed {
+    max-height: 0px;
+    overflow: hidden;
+}
+
 @media all and (max-width: 400px){
     .brandImgContainer{
         display: none;
