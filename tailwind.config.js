@@ -4,5 +4,10 @@ module.exports = {
   content: ["./index.html", "./src/**/*.{js,jsx}"],
   darkMode: 'class',
   plugins: [],
+  theme: {
+    screens: {
+      lg: '991px'
+    }
+  }
 };
 

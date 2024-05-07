@@ -8,15 +8,19 @@ import Toggle from "../svg/Toggle";
 
 const Header = ({ darkMode, changeTheme }) => {
   const [isOpen, setisOpen] = useState(false);
+  let windowWidth = window.innerWidth
 
   window.addEventListener("resize", () => {
-    if (window.innerWidth > 768 && isOpen === true) {
+    if (window.innerWidth > 990 && isOpen === true) {
       setisOpen(!isOpen);
     }
+    windowWidth = window.innerWidth
   });
 
   const toggleNavbar = () => {
-    setisOpen(!isOpen);
+    if (windowWidth < 991){
+      setisOpen(!isOpen);
+    }
   };
 
   return (
@@ -29,18 +33,18 @@ const Header = ({ darkMode, changeTheme }) => {
           <p className="flex flex-wrap text-2xl">Dylan Navarro</p>
         </a>
 
-        <div className="hidden md:flex justify-between items-center gap-3">
+        <div className="hidden lg:flex justify-between items-center gap-3">
           <NavLinks toggleNavbar={toggleNavbar}/>
           {darkMode ? <button onClick={changeTheme}><MoonSVG/></button> : <button onClick={changeTheme}><SunSVG /></button>}
         </div>
 
-        <div className="md:hidden flex items-center gap-3">
+        <div className="lg:hidden flex items-center gap-3">
           {darkMode ? <button onClick={changeTheme}><MoonSVG/></button> : <button onClick={changeTheme}><SunSVG /></button>}
           <button onClick={toggleNavbar}> <Toggle /> </button>
         </div>
       </nav>
       
-      <div className={`md:hidden navMenuMob overflow-hidden ${isOpen ? "navMenuMobOpen" : "navMenuMobClosed"}`} >
+      <div className={`md:hidden navMenuMob overflow-hidden ${isOpen ? "navMenuMobOpen" : "navMenuMobClosed"} `} >
         <div className="flex flex-col items-center py-4 gap-3">
           <NavLinks toggleNavbar={toggleNavbar}/>
         </div>
