@@ -41,35 +41,35 @@ const Header = ({ darkMode, changeTheme }) => {
         <a
           href="#"
           onClick={toggleNavbar}
-          className="hover:text-fuchsia-500 transition duration-200 ease-in-out"
+          className="hover:text-fuchsia-500 text-xl"
         >
           Inicio
         </a>
         <a
           href="#"
           onClick={toggleNavbar}
-          className="hover:text-fuchsia-500 transition duration-200 ease-in-out"
+          className="hover:text-fuchsia-500 text-xl"
         >
           Sobre mi
         </a>
         <a
           href="#"
           onClick={toggleNavbar}
-          className="hover:text-fuchsia-500 transition duration-200 ease-in-out"
+          className="hover:text-fuchsia-500 text-xl"
         >
           Experiencia
         </a>
         <a
           href="#"
           onClick={toggleNavbar}
-          className="hover:text-fuchsia-500 transition duration-200 ease-in-out"
+          className="hover:text-fuchsia-500 text-xl"
         >
           Habilidades
         </a>
         <a
           href="#"
           onClick={toggleNavbar}
-          className="hover:text-fuchsia-500 transition duration-200 ease-in-out"
+          className="hover:text-fuchsia-500 text-xl"
         >
           Contacto
         </a>
@@ -78,13 +78,13 @@ const Header = ({ darkMode, changeTheme }) => {
   };
 
   return (
-    <header className="bg-slate-900 text-white">
-      <nav className=" flex justify-between px-8 brandNameContainer">
-        <div className="flex items-center py-3 gap-8 h-24">
+    <header className={darkMode ? "dark" : "light"}>
+      <nav className={`flex justify-between px-4 md:px-12 brandNameContainer ${darkMode && "border-neutral-100"}`}>
+        <div className="flex items-center py-3 gap-4 h-24">
           <div className="rounded-lg bg-slate-400 px-3 brandImgContainer">
             <img src={navLogo} alt="foto de Dylan Navarro" className="h-16" />
           </div>
-          <p className="flex flex-wrap ">Dylan Navarro</p>
+          <p className="flex flex-wrap text-2xl">Dylan Navarro</p>
         </div>
 
         <div className="hidden md:flex justify-between items-center gap-3">
@@ -98,7 +98,7 @@ const Header = ({ darkMode, changeTheme }) => {
         </div>
       </nav>
       
-      <div className={`md:hidden navMenuMob ${isOpen ? "navMenuMobOpen" : "navMenuMobClosed"}`} >
+      <div className={`md:hidden navMenuMob overflow-hidden ${isOpen ? "navMenuMobOpen" : "navMenuMobClosed"}`} >
         <div className="flex flex-col items-center py-4 gap-3 border-t-2 border-t-gray-500">
           {navLinks()}
         </div>

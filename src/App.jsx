@@ -1,13 +1,20 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Header from './components/common/Header'
 
 function App() {
+  const sessionTheme = JSON.parse(sessionStorage.getItem("theme"))
   const [darkMode, setDarkMode] = useState(true)
-
+  
   const changeTheme = () => {
+    sessionStorage.setItem("theme", !darkMode)
     setDarkMode(!darkMode)
-    console.log('dasd')
   }
+
+  useEffect(() => {
+    if (sessionTheme !== null){
+      setDarkMode(sessionTheme)
+    }
+  }, [])
 
   return (
     <>
