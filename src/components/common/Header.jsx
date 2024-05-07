@@ -21,13 +21,13 @@ const Header = ({ darkMode, changeTheme }) => {
 
   return (
     <header className={darkMode ? "dark" : "light"}>
-      <nav className={`flex justify-between px-4 md:px-12 brandNameContainer ${darkMode && "border-neutral-100"}`}>
-        <div className="flex items-center py-3 gap-4 h-24">
+      <nav className={`flex justify-between px-4 md:px-12 brandNameContainer shadow-md transition-all duration-1000 ${isOpen && "shadow-sky-500" }`}>
+        <a className="flex items-center py-3 gap-4 h-24" href="#">
           <div className="rounded-lg bg-slate-400 px-3 brandImgContainer">
             <img src={navLogo} alt="foto de Dylan Navarro" className="h-16" />
           </div>
           <p className="flex flex-wrap text-2xl">Dylan Navarro</p>
-        </div>
+        </a>
 
         <div className="hidden md:flex justify-between items-center gap-3">
           <NavLinks toggleNavbar={toggleNavbar}/>
@@ -41,7 +41,7 @@ const Header = ({ darkMode, changeTheme }) => {
       </nav>
       
       <div className={`md:hidden navMenuMob overflow-hidden ${isOpen ? "navMenuMobOpen" : "navMenuMobClosed"}`} >
-        <div className="flex flex-col items-center py-4 gap-3 border-t-2 border-t-gray-500">
+        <div className="flex flex-col items-center py-4 gap-3">
           <NavLinks toggleNavbar={toggleNavbar}/>
         </div>
       </div>
