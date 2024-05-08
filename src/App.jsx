@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import Header from './components/common/Header'
+import Principal from './components/inicio/Principal'
 
 function App() {
   const sessionTheme = JSON.parse(sessionStorage.getItem("theme"))
@@ -18,7 +19,11 @@ function App() {
 
   return (
     <>
-      <Header darkMode={darkMode} changeTheme={changeTheme} />
+      {/* <Header darkMode={darkMode} changeTheme={changeTheme}/> */}
+      <div className='mt-6'>
+        <Principal />
+      </div>
+      
     </>
   )
 }
