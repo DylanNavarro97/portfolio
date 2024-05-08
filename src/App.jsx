@@ -20,7 +20,7 @@ function App() {
   return (
     <>
       {/* <Header darkMode={darkMode} changeTheme={changeTheme}/> */}
-      <div className='mt-6'>
+      <div className=''>
         <Principal />
       </div>
       
