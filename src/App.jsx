@@ -27,7 +27,7 @@ function App() {
         </div>
         
         <section className="flex-grow flex items-center">
-          <div className="d-flex">
+          <div className="d-flex w-screen">
             <Principal />
           </div>
         </section>
