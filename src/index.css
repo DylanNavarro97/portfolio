@@ -1,36 +1,56 @@
 @import "cal-sans";
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-#root{
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+::-webkit-scrollbar {
+  width: 10px;
 }
 
-main{
-    flex-grow: 1;
+::-webkit-scrollbar-track {
+  background: #ffffff;
 }
 
-h1,h2,h3,h4,h5,h6 {
-    font-family: "Cal Sans";
+::-webkit-scrollbar-thumb {
+  background: rgb(147 51 234);
 }
 
-p{
-    font-family: "DM Sans";
+::-webkit-scrollbar-thumb:hover {
+  background: #a661ce;
 }
 
-.purple-1000{
-    --tw-bg-opacity: 1;
-    background-color: rgb(41 12 64 / var(--tw-bg-opacity));
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
+main {
+  flex-grow: 1;
+}
 
-.purple-1100{
-    --tw-bg-opacity: 1;
-    background-color: rgb(29 9 46 / var(--tw-bg-opacity));
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Cal Sans";
+}
+
+p {
+  font-family: "DM Sans";
+}
+
+.purple-1000 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(41 12 64 / var(--tw-bg-opacity));
+}
+
+.purple-1100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(29 9 46 / var(--tw-bg-opacity));
 }
