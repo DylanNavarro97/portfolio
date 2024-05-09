@@ -10,15 +10,15 @@ const Principal = () => {
             <img
               src={profilePicture}
               alt="Dylan Navarro img"
-              className="w-2/3 md:w-2/3 lg:w-full"
+              className="w-2/3 md:w-4/12 lg:w-5/6"
             />
           </div>
         </div>
 
         <div className="mt-6 lg:mt-0 lg:w-1/2 flex items-center justify-center">
           <div className="flex flex-col text-center">
-            <h2 className="text-5xl lg:text-6xl text-purple-600 mb-3">Dylan Navarro</h2>
-            <p className="text-2xl  lg:text-3xl font-semibold mb-5">Web developer</p>
+            <h2 className="text-5xl lg:text-6xl text-purple-600 mb-3 dark:text-white">Dylan Navarro</h2>
+            <p className="text-2xl  lg:text-3xl font-semibold mb-5 dark:text-white">Desarrollador web</p>
             <div className="d-flex py-2">
               <div></div>
               <a

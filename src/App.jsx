@@ -20,17 +20,20 @@ function App() {
 
   return (
     <>
-      {/* <Header darkMode={darkMode} changeTheme={changeTheme}/> */}
-      <main className="h-screen flex flex-col">
+      
+      <main className={`${darkMode ? "dark" : "light"} h-screen flex flex-col`}>
         <div className="">
-          <LinksHeader/>
+          <LinksHeader darkMode={darkMode} changeTheme={changeTheme} />
         </div>
-        
-        <section className="flex-grow flex items-center">
+
+        <section
+          className={`flex-grow flex items-center ${darkMode && "purple-1000"}`}
+        >
           <div className="d-flex w-screen">
             <Principal />
           </div>
         </section>
+        <Header darkMode={darkMode} changeTheme={changeTheme} />
       </main>
     </>
   );

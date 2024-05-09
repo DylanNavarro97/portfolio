@@ -16,12 +16,6 @@ main{
     flex-grow: 1;
 }
 
-.dark{
-    --tw-bg-opacity: 1;
-    background-color: rgb(15 23 42 / var(--tw-bg-opacity));
-    color: #fff;
-}
-
 h1,h2,h3,h4,h5,h6 {
     font-family: "Cal Sans";
 }
@@ -30,3 +24,13 @@ p{
     font-family: "DM Sans";
 }
 
+.purple-1000{
+    --tw-bg-opacity: 1;
+    background-color: rgb(41 12 64 / var(--tw-bg-opacity));
+}
+
+
+.purple-1100{
+    --tw-bg-opacity: 1;
+    background-color: rgb(29 9 46 / var(--tw-bg-opacity));
+}

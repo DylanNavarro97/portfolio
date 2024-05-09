@@ -5,7 +5,7 @@ const Toggle = () => {
         width="42"
         height="42"
         fill="currentColor"
-        className="bi bi-list"
+        className="bi bi-list text-indigo-900 dark:text-white"
         viewBox="0 0 16 16"
       >
         <path

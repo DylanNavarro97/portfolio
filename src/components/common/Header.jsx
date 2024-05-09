@@ -1,6 +1,6 @@
 import "./header.css";
 import { useState } from "react";
-import navLogo from "../../assets/icon.png";
+import navLogo from "../../assets/inicio/personalPic.png";
 import MoonSVG from "../svg/MoonSVG";
 import SunSVG from "../svg/SunSVG";
 import NavLinks from "./NavLinks";
@@ -25,15 +25,15 @@ const Header = ({ darkMode, changeTheme }) => {
 
   return (
     <header className={darkMode ? "dark" : "light"}>
-      <nav className={`flex justify-between px-4 md:px-12 brandNameContainer shadow-md transition-all duration-1000 ${isOpen && "shadow-sky-500" }`}>
+      <nav className={`flex justify-between px-4 md:px-12 brandNameContainer shadow-md transition-all duration-500 backdrop-filter backdrop-blur-lg bg-opacity-50 ${isOpen ? (darkMode ? "shadow-blue-300" : "shadow-purple-400") : ""} ${darkMode ? "purple-1100 text-white" : "bg-purple-100"}`}>
         <a className="flex items-center py-3 gap-4 h-24" href="#">
-          <div className="rounded-lg bg-slate-400 px-3 brandImgContainer">
+          <div className="rounded-lg px-3 brandImgContainer">
             <img src={navLogo} alt="foto de Dylan Navarro" className="h-16" />
           </div>
-          <p className="flex flex-wrap text-2xl">Dylan Navarro</p>
+          <p className="flex flex-wrap text-2xl text-indigo-900 dark:text-white">Dylan Navarro</p>
         </a>
 
-        <div className="hidden lg:flex justify-between items-center gap-3">
+        <div className={`${darkMode && "dark"} hidden lg:flex justify-between items-center gap-3`}>
           <NavLinks toggleNavbar={toggleNavbar}/>
           {darkMode ? <button onClick={changeTheme}><MoonSVG/></button> : <button onClick={changeTheme}><SunSVG /></button>}
         </div>
@@ -44,8 +44,8 @@ const Header = ({ darkMode, changeTheme }) => {
         </div>
       </nav>
       
-      <div className={`md:hidden navMenuMob overflow-hidden ${isOpen ? "navMenuMobOpen" : "navMenuMobClosed"} `} >
-        <div className="flex flex-col items-center py-8 gap-3 border-b-2 border-sky-200">
+      <div className={`md:hidden navMenuMob overflow-hidden ${isOpen ? "navMenuMobOpen" : "navMenuMobClosed"} ${darkMode && "purple-1000 text-white"} `} >
+        <div className={`${darkMode && "dark"} flex flex-col items-center py-8 gap-3 border-b-2 border-purple-400 dark:border-y-stone-50`}>
           <NavLinks toggleNavbar={toggleNavbar}/>
         </div>
       </div>
