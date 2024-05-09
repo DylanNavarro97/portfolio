@@ -5,7 +5,7 @@ import LinksHeader from "./components/LinksHeader";
 
 function App() {
   const sessionTheme = JSON.parse(sessionStorage.getItem("theme"));
-  const [darkMode, setDarkMode] = useState(true);
+  const [darkMode, setDarkMode] = useState(false);
 
   const changeTheme = () => {
     sessionStorage.setItem("theme", !darkMode);
@@ -20,20 +20,22 @@ function App() {
 
   return (
     <>
-      
-      <main className={`${darkMode ? "dark" : "light"} h-screen flex flex-col`}>
-        <div className="">
+      <main className={`${darkMode ? "dark" : "light"}`}>
+        <section className={`h-screen flex flex-col`}>
+        <div>
           <LinksHeader darkMode={darkMode} changeTheme={changeTheme} />
         </div>
 
-        <section
-          className={`flex-grow flex items-center ${darkMode && "purple-1000"}`}
-        >
-          <div className="d-flex w-screen">
-            <Principal />
+          <div className={`flex-grow flex items-center ${darkMode && "purple-1000"}`}>
+            <div className="d-flex w-screen">
+              <Principal />
+            </div>
           </div>
         </section>
-        <Header darkMode={darkMode} changeTheme={changeTheme} />
+
+        <section>
+          <Header darkMode={darkMode} changeTheme={changeTheme} />
+        </section>
       </main>
     </>
   );
