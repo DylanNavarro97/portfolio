@@ -3,6 +3,7 @@ import Header from "./components/common/Header";
 import Principal from "./components/inicio/Principal";
 import LinksHeader from "./components/LinksHeader";
 import AboutMe from "./components/aboutMe/AboutMe";
+import Projects from "./components/projects/Projects";
 
 function App() {
   const sessionTheme = JSON.parse(sessionStorage.getItem("theme"));
@@ -62,7 +63,7 @@ function App() {
           
           <article className={`flex pt-40 ${darkMode ? "purple-1000" : ""}`}>
             <div className="flex-grow flex items-center" id="proyectos">
-              <AboutMe />
+              <Projects />
             </div>
           </article>
         </section>
