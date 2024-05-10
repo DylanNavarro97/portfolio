@@ -7,7 +7,7 @@
 @tailwind utilities;
 
 ::-webkit-scrollbar {
-  width: 5px;
+  width: 2px;
 }
 
 ::-webkit-scrollbar-track {
@@ -28,9 +28,9 @@
   min-height: 100vh;
 }
 
-html, body {
+/* html, body {
   scroll-behavior: smooth;
-}
+} */
 
 main {
   flex-grow: 1;

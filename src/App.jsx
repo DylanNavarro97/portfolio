@@ -7,7 +7,9 @@ import AboutMe from "./components/aboutMe/AboutMe";
 function App() {
   const sessionTheme = JSON.parse(sessionStorage.getItem("theme"));
   const [darkMode, setDarkMode] = useState(false);
+  const [scrolling, setScrolling] = useState(false)
   const aboutMeHeight = document.getElementById('aboutMe')?.getBoundingClientRect()
+  const mainSection = document.getElementById('mainSection')
   let prevY = window.pageYOffset
 
   window.addEventListener("scroll", () => {
@@ -15,20 +17,14 @@ function App() {
 
     if (currentY > prevY){
       if (currentY > 0 && currentY < window.innerHeight){
-        window.scrollTo({
-          top: window.innerHeight,
-          left: 0,
-          behavior: 'smooth'
-        });
+        if (currentY < window.innerHeight){
+          setScrolling('bajando')
+        }
       }
       
     } else {
       if (currentY < window.innerHeight){
-        window.scrollTo({
-          top: 0,
-          left: 0,
-          behavior: 'smooth'
-        });
+        setScrolling('subiendo')
       }
     }
 
@@ -47,9 +43,24 @@ function App() {
     }
   }, []);
 
+  useEffect(() => {
+    if (scrolling === 'bajando'){
+      window.scrollTo({
+        top: window.innerHeight,
+        left: 0,
+        behavior: 'smooth'
+      });
+    } else if (scrolling === 'subiendo'){
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'smooth'
+      });
+    }
+  }, [scrolling])
   return (
     <>
-      <main className={`${darkMode ? "dark" : "light"}`}>
+      <main className={`${darkMode ? "dark" : "light"}`} id="mainSection">
         <section className="h-screen flex flex-col">
           <div>
             <LinksHeader darkMode={darkMode} changeTheme={changeTheme} />
