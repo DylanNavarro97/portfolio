@@ -44,7 +44,7 @@ const Header = ({ darkMode, changeTheme }) => {
         </div>
       </nav>
       
-      <div className={`md:hidden navMenuMob overflow-hidden ${isOpen ? "navMenuMobOpen" : "navMenuMobClosed"} ${darkMode && "purple-1000 text-white"} `} >
+      <div className={`lg:hidden navMenuMob overflow-hidden ${isOpen ? "navMenuMobOpen" : "navMenuMobClosed"} ${darkMode && "purple-1000 text-white"} `} >
         <div className={`${darkMode && "dark"} flex flex-col items-center py-8 gap-3 border-b-2 border-purple-400 dark:border-y-stone-50`}>
           <NavLinks toggleNavbar={toggleNavbar}/>
         </div>
