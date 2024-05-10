@@ -34,22 +34,19 @@ function App() {
     <>
       <main className={`${darkMode ? "dark" : "light"}`} id="mainSection">
         <section className="min-h-screen flex flex-col">
-          <div>
+
             <LinksHeader darkMode={darkMode} changeTheme={changeTheme} />
-          </div>
+
 
           <div
-            className={`flex-grow flex items-center ${
-              darkMode && "purple-1000"
-            }`}
-          >
+            className={`flex-grow flex items-center ${darkMode && "purple-1000"}`}>
             <div className="d-flex w-screen">
               <Principal />
             </div>
           </div>
         </section>
 
-        <section className="min-h-screen flex flex-col">
+        <section className="flex flex-col">
 
           <div className={`sticky top-0 ${darkMode ? "purple-1000" : ""}`}>
             <div className={`transition-all duration-200  ${aboveVH ? "visible" : "opacity-0 pointer-events-none"}`}>
@@ -57,14 +54,14 @@ function App() {
             </div>
           </div>
           
-          <article className="heigthWithHeader flex" id="aboutMe">
-            <div className={`flex-grow flex items-center ${darkMode ? "purple-1000" : ""}`}>
+          <article className={`flex pt-40 ${darkMode ? "purple-1000" : ""}`} id="aboutMe">
+            <div className={`flex-grow flex items-center`}>
               <AboutMe />
             </div>
           </article>
           
-          <article className="heigthWithHeader flex">
-            <div className={`flex-grow flex items-center ${darkMode ? "purple-1000" : ""}`}>
+          <article className={`flex pt-40 ${darkMode ? "purple-1000" : ""}`}>
+            <div className="flex-grow flex items-center" id="proyectos">
               <AboutMe />
             </div>
           </article>

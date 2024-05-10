@@ -17,11 +17,11 @@ const NavLinks = ({ toggleNavbar }) => {
         Sobre mi
       </a>
       <a
-        href="#"
+        href="#proyectos"
         onClick={toggleNavbar}
         className="hover:text-fuchsia-500 text-xl"
       >
-        Experiencia
+        Proyectos
       </a>
       <a
         href="#"
