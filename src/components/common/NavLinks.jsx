@@ -1,5 +1,3 @@
-import { useEffect } from "react";
-
 const NavLinks = ({ toggleNavbar }) => {
 
   return (
@@ -12,7 +10,7 @@ const NavLinks = ({ toggleNavbar }) => {
         Inicio
       </a>
       <a
-        href="#"
+        href="#aboutMe"
         onClick={toggleNavbar}
         className="hover:text-fuchsia-500 text-xl"
       >

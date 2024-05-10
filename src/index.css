@@ -28,9 +28,9 @@
   min-height: 100vh;
 }
 
-/* html, body {
+html, body {
   scroll-behavior: smooth;
-} */
+}
 
 main {
   flex-grow: 1;
@@ -57,4 +57,8 @@ p {
 .purple-1100 {
   --tw-bg-opacity: 1;
   background-color: rgb(29 9 46 / var(--tw-bg-opacity));
+}
+
+.heigthWithHeader{
+  min-height: calc(100vh - 96px);
 }
