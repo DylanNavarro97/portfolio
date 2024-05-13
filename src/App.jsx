@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Header from "./components/common/Header";
-import Principal from "./components/inicio/Principal";
+import Principal from "./components/Principal/Principal";
 import LinksHeader from "./components/LinksHeader";
 import AboutMe from "./components/aboutMe/AboutMe";
 import Projects from "./components/projects/Projects";
@@ -55,17 +55,24 @@ function App() {
             </div>
           </div>
           
+          <article className={`flex pt-20 ${darkMode ? "purple-1000" : ""}`} id="aboutMe">
+            <div className={`flex-grow flex items-center`}>
+              <AboutMe />
+            </div>
+          </article>
+
+          <section className={`flex pt-20 ${darkMode ? "purple-1000" : ""}`} id="projects">
+            <div className={`flex-grow flex items-center`}>
+              <Projects />
+            </div>
+          </section>
+
           <article className={`flex pt-40 ${darkMode ? "purple-1000" : ""}`} id="aboutMe">
             <div className={`flex-grow flex items-center`}>
               <AboutMe />
             </div>
           </article>
           
-          <article className={`flex pt-40 ${darkMode ? "purple-1000" : ""}`}>
-            <div className="flex-grow flex items-center" id="proyectos">
-              <Projects />
-            </div>
-          </article>
         </section>
       </main>
     </>
