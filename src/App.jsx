@@ -4,6 +4,7 @@ import Principal from "./components/Principal/Principal";
 import LinksHeader from "./components/LinksHeader";
 import AboutMe from "./components/aboutMe/AboutMe";
 import Projects from "./components/projects/Projects";
+import Skills from "./components/skills/Skills";
 
 function App() {
   const sessionTheme = JSON.parse(sessionStorage.getItem("theme"));
@@ -67,9 +68,15 @@ function App() {
             </div>
           </section>
 
-          <article className={`flex pt-40 ${darkMode ? "purple-1000" : ""}`} id="aboutMe">
+          <article className={`flex pt-20 ${darkMode ? "purple-1000" : ""}`} id="aboutMe">
             <div className={`flex-grow flex items-center`}>
-              <AboutMe />
+              <Skills />
+            </div>
+          </article>
+
+          <article className={`flex pt-20 ${darkMode ? "purple-1000" : ""}`} id="aboutMe">
+            <div className={`flex-grow flex items-center`}>
+              {/* <Skills /> */}
             </div>
           </article>
           
