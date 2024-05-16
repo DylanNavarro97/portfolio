@@ -75,11 +75,11 @@ function App() {
             </div>
           </article>
 
-          <article className={`flex pt-20 ${darkMode ? "purple-1000" : ""}`} id="aboutMe">
-            <div className={`flex-grow flex items-center`}>
+          <section className={`flex py-20 ${darkMode ? "purple-1000" : ""}`} id="aboutMe">
+            <div className={`flex-grow flex items-center justify-center`}>
               <Contact />
             </div>
-          </article>
+          </section>
           
         </section>
       </main>
