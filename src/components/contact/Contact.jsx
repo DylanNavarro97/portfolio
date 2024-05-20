@@ -1,8 +1,6 @@
 import { enviarMail } from "../../helpers/queries"
 import { useForm } from "react-hook-form"
 
-enviarMail()
-
 const Contact = () => {
 
   const {
@@ -12,8 +10,21 @@ const Contact = () => {
     reset
   } = useForm()
 
-  const contactForm = (data) => {
-    console.log(data)
+  const contactForm = async (mail) => {
+    try {
+      const response = await enviarMail(mail)
+      if (response.status === 200){
+        Swal.fire({
+          position: "top-end",
+          icon: "success",
+          title: "Your work has been saved",
+          showConfirmButton: false,
+          timer: 1500
+        });
+      }
+    } catch (error) {
+      console.log(error)
+    }
   }
 
   return (
