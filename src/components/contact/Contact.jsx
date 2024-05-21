@@ -1,7 +1,8 @@
 import { enviarMail } from "../../helpers/queries"
 import { useForm } from "react-hook-form"
+import Swal from 'sweetalert2';
 
-const Contact = () => {
+const Contact = ({darkMode}) => {
 
   const {
     handleSubmit,
@@ -15,11 +16,18 @@ const Contact = () => {
       const response = await enviarMail(mail)
       if (response.status === 200){
         Swal.fire({
-          position: "top-end",
+          position: "center",
           icon: "success",
-          title: "Your work has been saved",
-          showConfirmButton: false,
-          timer: 1500
+          title: "El correo fue enviado correctamente.",
+          showConfirmButton: true,
+        });
+        reset()
+      } else {
+        Swal.fire({
+          position: "center",
+          icon: "error",
+          title:`Hubo un problema al enviar el correo. Por favor, envialo desde el boton "Contactar" al principio de la página.`,
+          showConfirmButton: true,
         });
       }
     } catch (error) {

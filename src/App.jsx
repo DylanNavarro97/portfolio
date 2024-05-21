@@ -77,7 +77,7 @@ function App() {
 
           <section className={`flex py-20 ${darkMode ? "purple-1000" : ""}`} id="aboutMe">
             <div className={`flex-grow flex items-center justify-center`}>
-              <Contact />
+              <Contact darkMode={darkMode}/>
             </div>
           </section>
           
