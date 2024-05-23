@@ -57,7 +57,7 @@ function App() {
             </div>
           </div>
           
-          <article className={`flex pt-20 ${darkMode ? "purple-1000" : ""}`} id="aboutMe">
+          <article className={`flex pt-10 ${darkMode ? "purple-1000" : ""}`} id="aboutMe">
             <div className={`flex-grow flex items-center`}>
               <AboutMe />
             </div>

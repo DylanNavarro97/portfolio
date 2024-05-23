@@ -5,7 +5,7 @@ const Projects = () => {
       name: "Restaurante Lotus",
       description: "Aplicación para la gestión de un restaurante donde los usuarios registrados pueden realizar pedidos en línea. Los administradores tienen la capacidad de agregar, modificar y eliminar productos del menú, así como de supervisar y gestionar el estado de los pedidos en tiempo real, mejorando así la eficiencia del servicio y la experiencia del cliente.",
       github: "https://github.com/juanchyquintana/restauranteFrontend",
-      deploy: "",
+      deploy: "https://lotusrestaurante.netlify.app",
       stack: ["ReactJs", "Bootstrap", "React Leaflet", "NodeJs", "Express", "MongoDB"],
       img: "https://i.postimg.cc/vT4gbv63/Captura-de-pantalla-2024-05-23-133917.png"
     },
