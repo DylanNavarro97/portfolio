@@ -44,13 +44,13 @@ const Projects = () => {
         Proyectos
       </h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 my-3">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 my-3">
         {projects.map((project, i) => (
-          <article className="p-6 border rounded-lg border-purple-400 transition-all duration-500 shadow-sm shadow-purple-400 hover:shadow-purple-400 hover:shadow-md">
-            <div className="py-2 px-8 rounded-lg bg-gradient-to-r from-purple-200 to-purple-500 dark:from-indigo-200 dark:to-sky-500 h-52">
-              <img src={project.img} alt={`${project.name} img`} className="rounded-lg h-full object-cover"/>
+          <article className="p-6 border rounded-lg border-purple-400 transition-all duration-500 shadow-sm shadow-purple-400 hover:shadow-purple-400 hover:shadow-md flex flex-col">
+            <div className="py-2 px-8 rounded-lg bg-gradient-to-r from-purple-200 to-purple-500 dark:from-indigo-200 dark:to-sky-500 h-60 md:h-52">
+              <img src={project.img} alt={`${project.name} img`} className="rounded-lg w-full h-full object-cover"/>
             </div>
-            <div className="mt-4">
+            <div className="mt-4 flex-grow">
               <div className="flex flex-wrap mb-4 gap-2">
                 {project.stack.map((skill, j) => (
                 <p className={`py-1 px-2 ${classColors[j]} rounded-md font-semibold`} key={j}>{skill}</p>
@@ -63,8 +63,7 @@ const Projects = () => {
 
             <div className="mt-4 flex justify-between">
               <a href={project.github} target="_blank" className="bg-black text-white font-bold py-2 px-4 rounded border transition-all duration-300 hover:bg-white hover:text-black hover:border-purple-600">Github</a>
-              {project.deploy !== "" ? <a href={project.deploy} target="_blank" className="bg-black text-white font-bold py-2 px-4 rounded border transition-all duration-300 hover:bg-white hover:text-black hover:border-purple-600">Visit Page</a> : <></>}
-              
+              {project.deploy !== "" ? <a href={project.deploy} target="_blank" className="bg-black text-white font-bold py-2 px-4 rounded border transition-all duration-300 hover:bg-white hover:text-black hover:border-purple-600">Visit Page</a> : <></>}             
             </div>
         </article>
         ))}
