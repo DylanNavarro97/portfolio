@@ -11,7 +11,6 @@ const NavLinks = ({ toggleNavbar, scrollTo }) => {
       </a>
       <a
         onClick={(e) => scrollTo('aboutMe', toggleNavbar)}
-        // href=""
         className="hover:text-fuchsia-500 text-xl"
       >
         Sobre mi

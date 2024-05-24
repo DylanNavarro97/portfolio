@@ -6,12 +6,13 @@ import AboutMe from "./components/aboutMe/AboutMe";
 import Projects from "./components/projects/Projects";
 import Skills from "./components/skills/Skills";
 import Contact from "./components/contact/Contact";
+import Down from "./components/svg/Down";
 
 function App() {
   const sessionTheme = JSON.parse(sessionStorage.getItem("theme"));
   const [darkMode, setDarkMode] = useState(false);
   const [aboveVH, setAboveVH] = useState(false)
-  const mainSection = document.getElementById('mainSection')
+  const [onTopZero, setOnTopZero] = useState(true)
   const aboutMeSection = document.getElementById('aboutMe')
   const projectsSection = document.getElementById('projects')
   const skillsSection = document.getElementById('skills')
@@ -27,6 +28,11 @@ function App() {
     if (currentY < window.innerHeight){
       setAboveVH(false)
     }
+    if (currentY !== 0){
+      setOnTopZero(false)
+    } else {
+      setOnTopZero(true)
+    }
   })
 
   const changeTheme = () => {
@@ -34,10 +40,15 @@ function App() {
     setDarkMode(!darkMode);
   };
 
+  const indexScroll = () => {
+    const topElement = document.getElementById('aboutMe').offsetTop
+    window.scrollTo({top: topElement - 10})
+  }
+
   const scrollTo = (sectionName, toggle) => {
     toggle()
     const scroll = (element) => {
-      const sectionTop = element.offsetTop
+      const sectionTop = element?.offsetTop
       window.scrollTo({
         top: sectionTop - 10,
         behavior: "smooth"
@@ -80,8 +91,10 @@ function App() {
               <Principal />
             </div>
           </div>
-          <div className="bg-opacity-20 bg-gray-50 absolute bottom-0 ">
-            <p className="text-center">asd</p>
+          <div className={`${onTopZero ? "opacity-100" : "opacity-0 pointer-events-none"} transition-all duration-300 py-2 absolute bottom-0 w-full`}>
+            <div className="flex justify-center ">
+              <Down indexScroll={indexScroll}/>
+            </div>
           </div>
         </section>
 
