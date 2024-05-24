@@ -37,7 +37,7 @@ const Contact = ({darkMode}) => {
 
   return (
     <div className="w-full lg:w-2/3 flex flex-col justify-center items-center px-3">
-      <h3 className="text-5xl lg:text-6xl text-purple-600 mb-3 dark:text-white">Contactame</h3>
+      <h3 className="text-4xl sm:text-5xl lg:text-6xl text-purple-600 mb-3 dark:text-white">Contactame</h3>
 
       <form className="w-full flex flex-col gap-3" onSubmit={handleSubmit(contactForm)}>
         <div className="md:flex md:gap-4">
