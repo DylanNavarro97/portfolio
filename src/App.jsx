@@ -13,12 +13,6 @@ function App() {
   const [darkMode, setDarkMode] = useState(false);
   const [aboveVH, setAboveVH] = useState(false)
   const [onTopZero, setOnTopZero] = useState(true)
-  const aboutMeSection = document.getElementById('aboutMe')
-  const projectsSection = document.getElementById('projects')
-  const skillsSection = document.getElementById('skills')
-  const contactSection = document.getElementById('contact')
-
-  
 
   window.addEventListener('scroll', () => {
     const currentY = window.pageYOffset
@@ -45,34 +39,6 @@ function App() {
     window.scrollTo({top: topElement - 10})
   }
 
-  const scrollTo = (sectionName, toggle) => {
-    toggle()
-    const scroll = (element) => {
-      const sectionTop = element?.offsetTop
-      window.scrollTo({
-        top: sectionTop - 10,
-        behavior: "smooth"
-      })
-    }
-
-    setTimeout(() => {
-      switch (sectionName)
-    {
-      case 'aboutMe':
-        scroll(aboutMeSection)
-        break
-      case 'projects':
-        scroll(projectsSection)
-        break
-      case 'skills':
-        scroll(skillsSection)
-        break
-      case 'contact':
-        scroll(contactSection)
-        break
-    }
-    }, 260)
-  }
 
   useEffect(() => {
     if (sessionTheme !== null) {
@@ -101,7 +67,7 @@ function App() {
         <section className="flex flex-col">
           <div className={`sticky top-0 ${darkMode ? "purple-1000" : ""}`}>
             <div className={`transition-all duration-200  ${aboveVH ? "visible" : "opacity-0 pointer-events-none"}`}>
-              <Header darkMode={darkMode} changeTheme={changeTheme} scrollTo={scrollTo}/>
+              <Header darkMode={darkMode} changeTheme={changeTheme}/>
             </div>
           </div>
           

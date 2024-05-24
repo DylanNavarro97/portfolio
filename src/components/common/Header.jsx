@@ -6,9 +6,13 @@ import SunSVG from "../svg/SunSVG";
 import NavLinks from "./NavLinks";
 import Toggle from "../svg/Toggle";
 
-const Header = ({ darkMode, changeTheme, scrollTo }) => {
+const Header = ({ darkMode, changeTheme }) => {
   const [isOpen, setisOpen] = useState(false);
   let windowWidth = window.innerWidth
+  const aboutMeSection = document.getElementById('aboutMe')
+  const projectsSection = document.getElementById('projects')
+  const skillsSection = document.getElementById('skills')
+  const contactSection = document.getElementById('contact')
 
   window.addEventListener("resize", () => {
     if (window.innerWidth > 990 && isOpen === true) {
@@ -23,6 +27,43 @@ const Header = ({ darkMode, changeTheme, scrollTo }) => {
     }
   };
 
+  const scrollTo = (sectionName, toggle) => {
+    toggle()
+    const scroll = (element) => {
+      const sectionTop = element?.offsetTop
+      window.scrollTo({
+        top: sectionTop - 10,
+        behavior: "smooth"
+      })
+    }
+
+    let timer = 260;
+
+    if (windowWidth < 991){
+      timer = 260
+    } else {
+      timer = 0
+    }
+
+    setTimeout(() => {
+      switch (sectionName)
+    {
+      case 'aboutMe':
+        scroll(aboutMeSection)
+        break
+      case 'projects':
+        scroll(projectsSection)
+        break
+      case 'skills':
+        scroll(skillsSection)
+        break
+      case 'contact':
+        scroll(contactSection)
+        break
+    }
+    }, timer)
+  }
+
   return (
     <header className={darkMode ? "dark" : "light"}>
       <nav className={`flex justify-between px-4 md:px-12 brandNameContainer shadow-md transition-all duration-500  ${isOpen ? (darkMode ? "shadow-blue-300" : "shadow-purple-400") : ""} ${darkMode ? "purple-1100 text-white" : "bg-purple-100"}`}>
@@ -34,7 +75,7 @@ const Header = ({ darkMode, changeTheme, scrollTo }) => {
         </a>
 
         <div className={`${darkMode && "dark"} hidden lg:flex justify-between items-center gap-3`}>
-          <NavLinks toggleNavbar={toggleNavbar} />
+          <NavLinks toggleNavbar={toggleNavbar} scrollTo={scrollTo}/>
           {darkMode ? <button onClick={changeTheme}><MoonSVG/></button> : <button onClick={changeTheme}><SunSVG /></button>}
         </div>
 
