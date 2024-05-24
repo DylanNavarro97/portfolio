@@ -1,38 +1,35 @@
-const NavLinks = ({ toggleNavbar }) => {
+const NavLinks = ({ toggleNavbar, scrollTo }) => {
 
   return (
     <>
       <a
-        href="#"
         onClick={toggleNavbar}
+        href="#"
         className="hover:text-fuchsia-500 text-xl"
       >
         Inicio
       </a>
       <a
-        href="#aboutMe"
-        onClick={toggleNavbar}
+        onClick={(e) => scrollTo('aboutMe', toggleNavbar)}
+        // href=""
         className="hover:text-fuchsia-500 text-xl"
       >
         Sobre mi
       </a>
       <a
-        href="#proyectos"
-        onClick={toggleNavbar}
+        onClick={(e) => scrollTo('projects', toggleNavbar)}
         className="hover:text-fuchsia-500 text-xl"
       >
         Proyectos
       </a>
       <a
-        href="#"
-        onClick={toggleNavbar}
+        onClick={(e) => scrollTo('skills', toggleNavbar)}
         className="hover:text-fuchsia-500 text-xl"
       >
         Habilidades
       </a>
       <a
-        href="#"
-        onClick={toggleNavbar}
+        onClick={(e) => scrollTo('contact', toggleNavbar)}
         className="hover:text-fuchsia-500 text-xl"
       >
         Contacto

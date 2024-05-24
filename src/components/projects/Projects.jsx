@@ -46,7 +46,7 @@ const Projects = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 my-3">
         {projects.map((project, i) => (
-          <article className="p-6 border rounded-lg border-purple-400 transition-all duration-500 shadow-sm shadow-purple-400 hover:shadow-purple-400 hover:shadow-md flex flex-col">
+          <article className="p-6 border rounded-lg border-purple-400 transition-all duration-500 shadow-sm shadow-purple-400 hover:shadow-purple-400 hover:shadow-md flex flex-col" key={i}>
             <div className="py-2 px-8 rounded-lg bg-gradient-to-r from-purple-200 to-purple-500 dark:from-indigo-200 dark:to-sky-500 h-60 md:h-52">
               <img src={project.img} alt={`${project.name} img`} className="rounded-lg w-full h-full object-cover"/>
             </div>
