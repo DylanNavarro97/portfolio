@@ -40,7 +40,7 @@ const Projects = () => {
 
   return (
     <div className="w-full flex flex-col justify-center items-center px-3 lg:px-8">
-      <h2 className="text-5xl lg:text-6xl text-purple-600 mb-3 dark:text-white">
+      <h2 className="text-4xl sm:text-5xl lg:text-6xl text-purple-600 mb-3 dark:text-white">
         Proyectos
       </h2>
 

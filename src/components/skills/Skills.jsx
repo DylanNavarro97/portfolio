@@ -111,7 +111,7 @@ const Skills = () => {
 
   return (
     <article className="w-full flex flex-col items-center my-3 px-3 lg:px-8">
-      <h2 className="text-5xl lg:text-6xl text-purple-600 mb-3 dark:text-white">
+      <h2 className="text-4xl sm:text-5xl lg:text-6xl text-purple-600 mb-3 dark:text-white">
         Mis skills
       </h2>
 
