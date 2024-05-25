@@ -19,18 +19,18 @@ const Principal = () => {
           <div className="flex flex-col text-center">
             <h2 className="text-5xl lg:text-6xl text-purple-600 mb-3 dark:text-white">Dylan Navarro</h2>
             <p className="text-2xl  lg:text-3xl font-semibold mb-5 dark:text-white">Desarrollador web</p>
-            <div className="d-flex py-2">
+            <div className="flex justify-center py-2 gap-2">
               <div></div>
               <a
                 href="mailto:dylanrubennavarro@gmail.com"
-                className="bg-blue-500 transition-all duration-300 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded me-3"
+                className="bg-blue-500 transition-all duration-300 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded "
               >
                 Contactar
               </a>
               <a
                 href={CV}
                 download
-                className="bg-black text-white font-bold py-2 px-4 rounded border transition-all duration-300 hover:bg-white hover:text-black hover:border-purple-600"
+                className="bg-black text-white font-bold py-2 px-4 rounded border transition-all duration-300 hover:bg-white hover:text-black hover:border-purple-600 inline-block "
               >
                 Descagar CV
               </a>

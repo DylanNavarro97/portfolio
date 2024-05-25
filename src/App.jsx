@@ -52,7 +52,7 @@ function App() {
         <section className="min-h-screen flex flex-col relative">
             <LinksHeader darkMode={darkMode} changeTheme={changeTheme} />
           <div
-            className={`flex-grow flex items-center ${darkMode && "purple-1000"}`}>
+            className={`flex-grow flex justify-center items-center ${darkMode && "purple-1000"}`}>
             <div className="d-flex w-screen">
               <Principal />
             </div>
