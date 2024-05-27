@@ -63,7 +63,7 @@ const Projects = () => {
 
             <div className="mt-4 flex justify-between">
               <a href={project.github} target="_blank" className="bg-black text-white font-bold py-2 px-4 rounded border transition-all duration-300 hover:bg-white hover:text-black hover:border-purple-600">Github</a>
-              {project.deploy !== "" ? <a href={project.deploy} target="_blank" className="bg-black text-white font-bold py-2 px-4 rounded border transition-all duration-300 hover:bg-white hover:text-black hover:border-purple-600">Visit Page</a> : <></>}             
+              {project.deploy !== "" ? <a href={project.deploy} target="_blank" className="bg-black text-white font-bold py-2 px-4 rounded border transition-all duration-300 hover:bg-white hover:text-black hover:border-purple-600">Ver Página</a> : <></>}             
             </div>
         </article>
         ))}
