@@ -80,7 +80,7 @@ const Skills = () => {
     {
       nombre: "Express",
       urlImage:
-        "https://www.orafox.com/wp-content/uploads/2019/01/expressjs.png",
+        "https://cdn.icon-icons.com/icons2/2415/PNG/512/express_original_logo_icon_146527.png",
     },
     {
       nombre: "Git",
