@@ -7,15 +7,15 @@ const Projects = () => {
       github: "https://github.com/juanchyquintana/restauranteFrontend",
       deploy: "https://lotusrestaurante.netlify.app",
       stack: ["ReactJs", "Bootstrap", "React Leaflet", "NodeJs", "Express", "MongoDB"],
-      img: "https://i.postimg.cc/vT4gbv63/Captura-de-pantalla-2024-05-23-133917.png"
+      img: "https://i.postimg.cc/sDKh84pn/lotus.png"
     },
     {
-      name: "Trueka",
-      description: "Aplicación de intercambios entre usuarios donde estos pueden publicar artículos que desean intercambiar y recibir ofertas de otros usuarios. Esta plataforma facilita el trueque de bienes entre particulares. Actualmente, el despliegue de la aplicación no está disponible ya que se encuentra dentro de un repositorio de No Country.",
-      github: "https://github.com/No-Country/s9-12-t-nest-react",
-      deploy: "",
-      stack: ["ReactJS", "Bootstrap", "React-Redux", "React Leaflet"],
-      img: "https://camo.githubusercontent.com/98424198349e5efadc2890aa4db28c465774268b79c638889dca96c7c0f22fcf/68747470733a2f2f7265732e636c6f7564696e6172792e636f6d2f647069776d62736f672f696d6167652f75706c6f61642f76313639303530303536332f747275656b612f545255454b41484f4d453132335f71686e6431382e706e67"
+      name: "Integración de Mercado Pago",
+      description: `App web donde se integra Mercado Pago para realizar cobros utilizando la version checkout Pro. Tiene un "producto" predefinido junto con su precio, sin embargo puede realizarse modificaciones para que dependa de una seleccion de productos previa al pago.`,
+      github: "https://github.com/DylanNavarro97/mp-checkout-int",
+      deploy: "https://mp-checkout-int.vercel.app/",
+      stack: ["NextJS", "TailwindCSS", "MP Checkout Pro"],
+      img: "https://i.postimg.cc/054gCL4Z/mp-int-1.png"
     },
     {
       name: "Blog de recetas",
@@ -23,7 +23,7 @@ const Projects = () => {
       github: "https://github.com/DylanNavarro97/blogDeRecetasFront",
       deploy: "https://blog-de-recetas-dn.netlify.app/",
       stack: ["ReactJS", "Bootstrap", "NodeJs", "Express", "MongoDB"],
-      img: "https://i.postimg.cc/J0JxcFNB/Captura-de-pantalla-2024-05-23-140738.png"
+      img: "https://i.postimg.cc/3Jryg0P2/recetas-1.png"
     },
     {
       name: "UpCicrle",

@@ -63,6 +63,11 @@ const Skills = () => {
         "https://static-00.iconduck.com/assets.00/node-js-icon-1817x2048-g8tzf91e.png",
     },
     {
+      nombre: "Express",
+      urlImage:
+        "https://cdn.icon-icons.com/icons2/2415/PNG/512/express_original_logo_icon_146527.png",
+    },
+    {
       nombre: "MySQL",
       urlImage:
         "https://cdn.icon-icons.com/icons2/2415/PNG/512/mysql_original_wordmark_logo_icon_146417.png",
@@ -71,11 +76,6 @@ const Skills = () => {
       nombre: "MongoDB",
       urlImage:
         "https://cdn.icon-icons.com/icons2/2415/PNG/512/mongodb_original_wordmark_logo_icon_146425.png",
-    },
-    {
-      nombre: "Express",
-      urlImage:
-        "https://cdn.icon-icons.com/icons2/2415/PNG/512/express_original_logo_icon_146527.png",
     },
     
   ];
