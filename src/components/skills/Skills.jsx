@@ -44,19 +44,14 @@ const Skills = () => {
         "https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png",
     },
     {
-      nombre: "Angular",
+      nombre: "NextJS",
       urlImage:
-        "https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/21_Angular_logo_logos-512.png",
+        "https://cdn.icon-icons.com/icons2/2148/PNG/512/nextjs_icon_132160.png",
     },
     {
       nombre: "Redux Toolkit",
       urlImage:
         "https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/redux-icon.png",
-    },
-    {
-      nombre: "C",
-      urlImage:
-        "https://upload.wikimedia.org/wikipedia/commons/1/19/C_Logo.png",
     },
     {
       nombre: "Java",
@@ -82,31 +77,7 @@ const Skills = () => {
       urlImage:
         "https://cdn.icon-icons.com/icons2/2415/PNG/512/express_original_logo_icon_146527.png",
     },
-    {
-      nombre: "Git",
-      urlImage:
-        "https://cdn.iconscout.com/icon/free/png-256/free-git-17-1175218.png",
-    },
-    {
-      nombre: "Github",
-      urlImage:
-        "https://cdn.icon-icons.com/icons2/1476/PNG/512/github_101792.png",
-    },
-    {
-      nombre: "Netlify",
-      urlImage:
-        "https://static-00.iconduck.com/assets.00/netlify-icon-511x512-idkvcd89.png",
-    },
-    {
-      nombre: "Vercel",
-      urlImage:
-        "https://miro.medium.com/v2/resize:fit:723/1*fz3mMf1sZ_JMy-x44E1uLg.png",
-    },
-    {
-      nombre: "Github Pages",
-      urlImage:
-        "https://cdn.icon-icons.com/icons2/1476/PNG/512/github_101792.png",
-    },
+    
   ];
 
   return (
