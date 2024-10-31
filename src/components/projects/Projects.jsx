@@ -2,14 +2,6 @@ const Projects = () => {
 
   const projects = [
     {
-      name: "Restaurante Lotus",
-      description: "Aplicación para la gestión de un restaurante donde los usuarios registrados pueden realizar pedidos en línea. Los administradores tienen la capacidad de agregar, modificar y eliminar productos del menú, así como de supervisar y gestionar el estado de los pedidos en tiempo real, mejorando así la eficiencia del servicio y la experiencia del cliente.",
-      github: "https://github.com/juanchyquintana/restauranteFrontend",
-      deploy: "https://lotusrestaurante.netlify.app",
-      stack: ["ReactJs", "Bootstrap", "React Leaflet", "NodeJs", "Express", "MongoDB"],
-      img: "https://i.postimg.cc/sDKh84pn/lotus.png"
-    },
-    {
       name: "Integración de Mercado Pago",
       description: `App web donde se integra Mercado Pago para realizar cobros utilizando la version checkout Pro. Tiene un "producto" predefinido junto con su precio, sin embargo puede realizarse modificaciones para que dependa de una seleccion de productos previa al pago.`,
       github: "https://github.com/DylanNavarro97/mp-checkout-int",
@@ -18,20 +10,28 @@ const Projects = () => {
       img: "https://i.postimg.cc/054gCL4Z/mp-int-1.png"
     },
     {
+      name: "NodeJS - Nodemailer - Google Oauth 2.0",
+      description: "Este proyecto es un backend creado con Node.js y Express que permite el envío de correos electrónicos utilizando Nodemailer junto con Google OAuth 2 para la autenticación. Es ideal para aplicaciones que necesitan una funcionalidad de envío de emails segura, como formularios de contacto o notificaciones.",
+      github: "https://github.com/DylanNavarro97/portfolioBack",
+      deploy: "",
+      stack: ["NodeJS", "Express", "Nodemailer", "Google Oauth 2.0"],
+      img: "https://i.postimg.cc/cCGY5cK6/1-A8dzt-L-AUWb5-RLSx94ac0-A.png"
+    },
+    {
+      name: "Restaurante Lotus",
+      description: "Aplicación para la gestión de un restaurante donde los usuarios registrados pueden realizar pedidos en línea. Los administradores tienen la capacidad de agregar, modificar y eliminar productos del menú, así como de supervisar y gestionar el estado de los pedidos en tiempo real, mejorando así la eficiencia del servicio y la experiencia del cliente.",
+      github: "https://github.com/juanchyquintana/restauranteFrontend",
+      deploy: "https://lotusrestaurante.netlify.app",
+      stack: ["ReactJs", "Bootstrap", "React Leaflet", "NodeJs", "Express", "MongoDB"],
+      img: "https://i.postimg.cc/sDKh84pn/lotus.png"
+    },
+    {
       name: "Blog de recetas",
       description: "Blog de práctica CRUD basado en recetas culinarias. El blog contiene un solo usuario administrador con el correo admin@recetasrolling.com y la contraseña Recetas1024. Este administrador puede gestionar las recetas publicadas, proporcionando una plataforma práctica para el aprendizaje y la demostración de habilidades CRUD.",
       github: "https://github.com/DylanNavarro97/blogDeRecetasFront",
       deploy: "https://blog-de-recetas-dn.netlify.app/",
       stack: ["ReactJS", "Bootstrap", "NodeJs", "Express", "MongoDB"],
       img: "https://i.postimg.cc/3Jryg0P2/recetas-1.png"
-    },
-    {
-      name: "UpCicrle",
-      description: "Plataforma que busca conectar fábricas, empresas y locales que generan residuos con diseñadores y artistas interesados en reutilizar esos materiales para crear productos únicos y sostenibles. La iniciativa promueve la economía circular y el aprovechamiento de materiales que de otro modo serían desechados. Actualmente, el despliegue de esta plataforma no está disponible ya que se encuentra dentro de un repositorio de No Country.",
-      github: "https://github.com/No-Country/c11-19-m-javareact",
-      deploy: "",
-      stack: ["ReactJS", "Bootstrap", "Firebase", "Styled components"],
-      img: "https://i.postimg.cc/3wM8Br6c/upcircle.png"
     }
   ]
 
