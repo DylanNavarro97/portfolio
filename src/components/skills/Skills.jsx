@@ -32,7 +32,7 @@ const Skills = () => {
     {
       nombre: "JavaScript",
       urlImage:
-        "https://cdn.icon-icons.com/icons2/2415/PNG/512/javascript_original_logo_icon_146455.png",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/768px-JavaScript-logo.png",
     },
     {
       nombre: "TypeScript",
@@ -46,7 +46,7 @@ const Skills = () => {
     {
       nombre: "NextJS",
       urlImage:
-        "https://cdn.icon-icons.com/icons2/2148/PNG/512/nextjs_icon_132160.png",
+        "https://images-cdn.openxcell.com/wp-content/uploads/2024/07/24154156/dango-inner-2.webp",
     },
     {
       nombre: "Redux Toolkit",
@@ -65,17 +65,17 @@ const Skills = () => {
     {
       nombre: "Express",
       urlImage:
-        "https://cdn.icon-icons.com/icons2/2415/PNG/512/express_original_logo_icon_146527.png",
+        "https://www.manektech.com//storage/technology/image/1646733600.webp",
     },
     {
       nombre: "MySQL",
       urlImage:
-        "https://cdn.icon-icons.com/icons2/2415/PNG/512/mysql_original_wordmark_logo_icon_146417.png",
+        "https://cdn.freebiesupply.com/logos/large/2x/mysql-5-logo-png-transparent.png",
     },
     {
       nombre: "MongoDB",
       urlImage:
-        "https://cdn.icon-icons.com/icons2/2415/PNG/512/mongodb_original_wordmark_logo_icon_146425.png",
+        "https://cdn.iconscout.com/icon/free/png-256/free-mongodb-logo-icon-download-in-svg-png-gif-file-formats--technology-social-media-company-brand-vol-5-pack-logos-icons-3030245.png",
     },
     
   ];
